@@ -1,0 +1,33 @@
+一
+返回
+{ status code: 200, headers {
+    "Content-Type" = "text/html;charset=utf-8";
+    Date = "Fri, 17 Feb 2017 02:26:00 GMT";
+    Expires = "Thu, 01 Jan 1970 00:00:00 GMT";
+    Server = "Jetty(9.3.z-SNAPSHOT)";
+    "Set-Cookie" = "mbxSecWssTkn= ";
+    "Transfer-Encoding" = Identity;
+} }
+得到Set-Cookie;
+二
+websocket
+ws://121.196.244.121:9090/ws/!1dStat
+得到websocket地址
+将第一步中得到的Set-Cookie放到http header: Cookie中
+建立websocket连接
+推送数据返回
+[[
+"2000007",                //产品编号
+1488778189855,        //最新价时间
+1484184600000,        //开盘时间
+-1,                            //休盘时间  (-1 为持续开盘中)
+"256.97",                  //最新价
+"2714",                     //主动买量
+"697419.77",             //主动买额
+"608",                       //主动卖量
+"156230.89",             //主动卖额
+"256.96",                  //开
+"256.98",                  //高
+"251.00"                   //低
+]]
+
